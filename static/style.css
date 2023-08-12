@@ -1,0 +1,69 @@
+/* Center content vertically and horizontally */
+#start-display, #board-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Button styling */
+#start, #guess-submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#board, tr, th, td {
+    font-size: 20px;
+    border: 2px solid;
+    font-size: 30px;
+    padding: 20px;
+}
+
+/* Form and input styling */
+#guess-form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#user-guess {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* User message styling */
+#user-message {
+    position: fixed;
+    left: 75%;
+    top: 40%;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Hide element */
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+#correct-guess {
+    position: fixed;
+    left: 75%;
+    top: 50%;
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+}

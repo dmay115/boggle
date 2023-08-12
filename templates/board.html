@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block title %}Boggle!{% endblock %} {% block
+content %}
+<div id="start-display">
+  {% if (times_played > 0) %}
+  <p>Your record: {{ record }}</p>
+  <p>Times played: {{ session['times_played'] }}</p>
+  {% endif %}
+  <button id="start">Start the game!</button>
+</div>
+<div  id="board-display" class="hidden">
+    <div>
+    <p>Score:<span id="score-board"></span></p>
+    <p>Timer:<span id="timer"></span></p>
+    <table id="board">
+      <tr>
+        <th colspan="5">Boggle!</th>
+      </tr>
+      <tr>
+        {% for row in session['boggle_board'] %}
+      </tr>
+
+      <tr>
+        {% for letter in row %}
+        <td .letter>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <form id="guess-form">
+      <input id="user-guess" type="text" name="word" placeholder="Your Guess">
+      <button type="submit" id="guess-submit">Check Word</button>
+  </form>
+  </div>
+  <div>
+      <p id="user-message"></p>
+  </div> 
+  <div>
+      <ul id="correct-guess">
+      </ul>
+  </div>
+</div>
+{% endblock %}
